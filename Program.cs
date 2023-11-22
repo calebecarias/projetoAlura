@@ -92,18 +92,22 @@ void AvaliarUmaBanda()
     Console.Clear();
     ExibirTitulo("Avaliar Banda");
     Console.Write("Digite o nome da banda que você deseja avaliar: ");
-    string banda = Console.ReadLine();
+    string banda = Console.ReadLine()!;
     if (bandasRegistradas.ContainsKey(banda))
     {  
-        Console.Write($"Qual nota que a banda {banda} merece?");
+        Console.Write($"Qual nota que a banda {banda} merece? ");
         int nota = int.Parse(Console.ReadLine()!);
         bandasRegistradas[banda].Add(nota);
+        Console.WriteLine("Digite uma tecla para voltar ao menu principal");
+        Console.ReadKey();
+        Console.Clear();
+        ExibirOpcoesDoMenu();
 
     } else
     {
         Console.WriteLine($"\nA banda {banda} não foi encontrada!");
         Console.WriteLine("Digite uma tecla para voltar ao menu principal");
-        Console.ReadKey()!;
+        Console.ReadKey();
         Console.Clear();
         ExibirOpcoesDoMenu();
     }
