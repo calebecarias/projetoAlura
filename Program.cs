@@ -44,7 +44,7 @@ void ExibirOpcoesDoMenu()
             ExibirMedias();
             break;
         case -1:
-            Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaNumerica);
+            Console.WriteLine("O programa foi encerrado. ");
             break;
         default:
             Console.WriteLine("Voce escolheu uma opção errada");
